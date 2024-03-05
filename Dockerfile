@@ -4,6 +4,7 @@ RUN apk update && apk add unzip
 RUN unzip /pocketbase_0.22.2_linux_amd64.zip
 
 FROM alpine:latest as run
+LABEL org.opencontainers.image.source https://github.com/eulentier161/dockerbase
 RUN addgroup --system --gid 1001 pocketbase
 RUN adduser --system --uid 1001 pocketbase
 WORKDIR /pocketbase
