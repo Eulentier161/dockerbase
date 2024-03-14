@@ -1,7 +1,7 @@
 FROM alpine:latest AS prep
-RUN wget https://github.com/pocketbase/pocketbase/releases/download/v0.22.3/pocketbase_0.22.3_linux_amd64.zip
+RUN wget https://github.com/pocketbase/pocketbase/releases/download/v0.22.4/pocketbase_0.22.4_linux_amd64.zip
 RUN apk update && apk add unzip
-RUN unzip /pocketbase_0.22.3_linux_amd64.zip
+RUN unzip /pocketbase_0.22.4_linux_amd64.zip
 
 FROM alpine:latest as run
 LABEL org.opencontainers.image.source https://github.com/eulentier161/dockerbase
